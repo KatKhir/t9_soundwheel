@@ -16,3 +16,32 @@ p {
 body {
   padding: 2rem;
 }
+
+/**** "Hvorfor vælge Soundwheel" ****/
+
+.grunde {
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.tre_grunde h2 {
+  margin-bottom: 50px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grunde h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.nummer {
+  font-size: 3rem;
+  color: #3a1f1a;
+  font-weight: 300;
+  margin-bottom: 20px;
+}

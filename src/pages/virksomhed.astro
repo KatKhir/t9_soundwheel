@@ -1,7 +1,7 @@
 ---
 import Card from "../components/Card.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import Navigation from "../components/Navigation.astro";
+import "../styles/virksomhed.css"
 ---
 
 <PageLayout>
@@ -15,11 +15,13 @@ import Navigation from "../components/Navigation.astro";
     </head>
     <body>
       <h1>For virksomhheder</h1>
-
       <section>
         <h2>kort sektion</h2>
-        <Card />
-      </section>
+        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
+        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
+        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
+        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
+    </section>
     </body>
   </html>
 </PageLayout>

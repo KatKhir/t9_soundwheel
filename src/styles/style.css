@@ -5,10 +5,14 @@
 }
 
 img {
-  max-width: 100%;
+  max-width: 40%;
 }
 
 p {
   max-width: 400px;
   text-align: center;
+}
+
+body {
+  padding: 2rem;
 }

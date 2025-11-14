@@ -1,6 +1,10 @@
+---
+const {img, text1, text2, tag } = Astro.props
+---
+
 <article>
-<img src="/img/billede2.webp">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p>Læs mere</p>
-</article>
+<img src={img}>
+<p>{text1}</p>
+<p>{text2}</p>
+<p>{tag}</p>
+</article> 

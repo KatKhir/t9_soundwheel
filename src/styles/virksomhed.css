@@ -3,3 +3,20 @@
   margin: 0;
   padding: 0;
 }
+
+/********************** img *****************/
+
+img {
+  max-width: 100%;
+}
+
+/***************************** dekstop ************************/
+@media (min-width: 760px) {
+  .grid_2_1fr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}

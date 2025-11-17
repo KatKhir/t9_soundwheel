@@ -1,0 +1,38 @@
+---
+const { label = "Klik her", type = "button" } = Astro.props;
+---
+
+<button type={type} class="soundwheel_knap">
+  {label}
+</button>
+
+<style>
+  .soundwheel_knap {
+    background-color: #3a1213;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .soundwheel_knap:hover {
+    opacity: 0.85;
+  }
+
+  .soundwheel_knap:active {
+    transform: scale(0.97);
+  }
+
+  @media (min-width: 800px) {
+    .soundwheel_knap {
+      font-size: 1rem;
+    }
+  }
+</style>

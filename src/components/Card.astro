@@ -8,3 +8,31 @@ const {img, text1, text2, tag } = Astro.props
 <p>{text2}</p>
 <p>{tag}</p>
 </article> 
+
+
+<style>
+img{
+    min-width: 100%;
+}
+
+p{
+color: white; 
+  text-align: left; 
+  margin: 30px;
+}
+
+article{
+    background-color: #7D969B;
+    margin-top: 50px;
+   
+}
+/***************** desktop ****/
+@media (min-width: 760px){
+article{
+ margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+}
+
+</style>

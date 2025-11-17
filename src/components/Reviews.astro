@@ -1,0 +1,70 @@
+---
+const reviews = [
+  "“Wow! Jeg er blæst bagover af jeres meditationer. Føler mig badet i omsorg, når jeg lytter til den fantastiske stemme og varme, nærende ord.“",
+  "“SoundWheel er et dejligt redskab til at skabe små frirum og pauser i hverdagen – selv bruger jeg lydrejserne lige før sengetid. De giver ro og forbundethed.“",
+  "“Kristians stemme er rolig og behagelig og musikken taler til noget stammekultur dybt i mig. Stor anbefaling herfra.“",
+  "“Jeg er godt igang med jeres meditationer, og hold nu op det er godt!“",
+  "“Både det talte og det musikalske. Musikken giver mig en følelse af at være en del af alt det store. En ydmyghed, som da jeg kiggede op på stjernerne som barn.“",
+  "“Jeres rejser giver mig mod på at drømme større og føle mere. De får mig til at vågne op til livet igen, fornyet og forfrisket!“",
+  "“Jeg har altid haft svært ved at finde meditationer som matcher mig. Jeg er SÅ “kræsen”. Men hold da op hvor blev jeg rørt første gang jeg hørte SoundWheel✨“",
+  "“Tak fordi I har skabt det her univers! Det er jo fuldstændig fantastisk. Wow.“",
+  "“Min kreativitet sprudler. Tak!“",
+];
+---
+
+<style>
+  .reviews-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    margin-top: 4rem;
+  }
+
+  .review-box {
+    max-width: 250px;
+    height: 250px;
+    padding: 30px;
+    background: #605454;
+    color: white;
+    flex-shrink: 0;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  @media (min-width: 800px) {
+    .review-box {
+      max-width: 300px;
+    }
+
+    .reviews-container {
+      gap: 3rem;
+      margin-top: 6rem;
+    }
+  }
+
+  .tegn_section {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+  }
+
+  .tegn {
+    width: 15px;
+    height: auto;
+    display: block;
+  }
+</style>
+
+<div class="reviews-container">
+  {
+    reviews.map((text) => (
+      <div class="review-box">
+        {text}
+        <div class="tegn_section">
+          <img class="tegn" src="/img/Comma.webp" alt="quote icon" />
+          <img class="tegn" src="/img/Comma.webp" alt="quote icon" />
+        </div>
+      </div>
+    ))
+  }
+</div>

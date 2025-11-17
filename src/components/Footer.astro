@@ -1,0 +1,91 @@
+---
+// footer.astro
+// You can import images or icons here if needed
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="/img/cirkellogo.webp" alt="Cirkel Logo" class="cirkellogo" />
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+
+    <!-- Social Icons (optional) -->
+    <div class="footer-social">
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-copy">&copy; {new Date().getFullYear()} Soundwheel. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #3a1213; /* dark red/burgundy */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-logo img {
+    max-width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .footer-nav {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .footer-nav a:hover {
+    color: #ffcc00;
+  }
+
+  .footer-social {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-social a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-social a:hover {
+    color: #ffcc00;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    color: #ccc;
+  }
+</style>

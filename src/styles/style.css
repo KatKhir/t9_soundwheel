@@ -8,15 +8,205 @@ img {
   max-width: 40%;
 }
 
-p {
+/****** Forside ********/
+
+.forside {
+  position: relative;
+  background-image: url("/img/forside.webp");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 30px;
+}
+
+@media (min-width: 800px) {
+  .forside {
+    height: 80vh;
+    background-size: cover;
+    background-position: bottom;
+  }
+}
+
+.venstre h1 {
+  font-size: 2rem;
+  color: #3a1213;
+  margin-bottom: 10px;
+}
+
+.venstre h2 {
+  font-size: 0.9rem;
+  color: #3e2020;
+  margin-bottom: 30px;
+}
+
+.højre {
+  text-align: right;
+  color: #f2f2f2;
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.audio-card {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #9c8889;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 130px;
+}
+
+.play-btn {
+  background-color: #3e2020;
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.om p {
   max-width: 400px;
   text-align: center;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
-body {
-  padding: 2rem;
+@media (min-width: 800px) {
+  .om p {
+    max-width: 750px;
+    line-height: 2.2;
+  }
 }
 
+.om img {
+  max-width: 160px;
+  display: block;
+  margin: 0 auto;
+}
+
+/***** Abonnemment sektion ******/
+
+.abonnemment {
+  background-color: #8e7f7f;
+  padding: 40px 20px 80px;
+  color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .abonnemment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    padding: 40px 80px;
+  }
+}
+
+.phones {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  margin-bottom: 20px;
+}
+
+.phone {
+  position: absolute;
+  max-width: 260px;
+}
+
+.phone-left {
+  left: -5px;
+  top: 0;
+  transform: rotate(-10deg);
+}
+
+.phone-right {
+  right: -20px;
+  top: 30px;
+  transform: rotate(8deg);
+}
+
+.pris {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #3a1213;
+  text-align: left;
+}
+
+.prøve {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.abonnemment h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 10px 0 20px;
+}
+
+.abonnemment h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 20px 0 10px;
+}
+
+.abonnemment ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.plus {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+@media (min-width: 900px) {
+  .phone {
+    max-width: 450px;
+  }
+
+  .phone-left {
+    left: -90px;
+  }
+
+  .phone-right {
+    right: -60px;
+  }
+
+  .abonnemment h2 {
+    font-size: 1.6rem;
+  }
+
+  .pris {
+    font-size: 1.4rem;
+  }
+
+  .prøve {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .abonnemment h3 {
+    font-size: 1rem;
+  }
+}
 /**** "Hvorfor vælge Soundwheel" ****/
 
 .grunde {
@@ -26,11 +216,31 @@ body {
   padding: 40px 20px;
 }
 
+.grunde_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 800px) {
+  .grunde_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+  }
+}
+
 .tre_grunde h2 {
-  margin-bottom: 50px;
+  padding-top: 50px;
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (min-width: 800px) {
+  .tre_grunde h2 {
+    font-size: 2rem;
+    padding-bottom: 30px;
+  }
 }
 
 .grunde h3 {
@@ -44,4 +254,217 @@ body {
   color: #3a1f1a;
   font-weight: 300;
   margin-bottom: 20px;
+}
+
+/**** "Ikke endnu en meditations-app" ***/
+
+.meditation {
+  background-color: #cad6d7;
+  color: #3a1213;
+}
+
+.meditation img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.meditation .content {
+  padding: 60px;
+}
+
+@media (min-width: 800px) {
+  .meditation {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .meditation img {
+    max-width: 40%;
+    height: 80vh;
+    margin-bottom: 0px;
+  }
+
+  .meditation .content {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+.meditation h2,
+.meditation p {
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.meditation h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 800px) {
+  .meditation p {
+    line-height: 2rem;
+  }
+
+  .meditation h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/**** Mental fitness for medarbejdere section ****/
+
+.mental_fitness {
+  background-color: #7d969b;
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .mental_fitness {
+    display: flex;
+  }
+}
+
+.mental_fitness img {
+  max-width: 100%;
+  display: block;
+}
+
+.mental_fitness .content {
+  padding: 60px;
+}
+
+.mental_fitness h2,
+.mental_fitness p {
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.mental_fitness h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 800px) {
+  .mental_fitness .content {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .mental_fitness h2 {
+    font-size: 2.5rem;
+  }
+
+  .mental_fitness img {
+    height: 100vh;
+    margin-bottom: 0px;
+  }
+
+  .mental_fitness p {
+    line-height: 2rem;
+  }
+}
+
+/**** Skole og uddannelse ***/
+
+.skole {
+  background-color: #f4f1f1;
+  margin-top: 40px;
+}
+
+.skole .content {
+  padding: 60px;
+}
+
+.skole img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .skole {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .skole img {
+    max-width: 40%;
+    height: 80vh;
+    margin-bottom: 0px;
+  }
+
+  .skole .content {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+.skole h2,
+.skole p {
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.skole h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 800px) {
+  .skole p {
+    line-height: 2rem;
+  }
+
+  .skole h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/***** SVG baggrund ****/
+
+.svg {
+  width: 100%;
+  height: 30vh;
+  background-image: url("/img/baggrund.svg");
+  margin-top: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.svg .cirkellogo {
+  max-width: 130px;
+}
+
+.svg_p {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  color: #3a1213;
+  max-width: 160px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+@media (min-width: 800px) {
+  .svg {
+    width: 100%;
+    height: 70vh;
+    background-image: url("/img/baggrund.svg");
+    margin-top: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .svg .cirkellogo {
+    max-width: 160px;
+  }
+
+  .svg_p {
+    top: 300px;
+    max-width: 160px;
+    font-size: 1.5rem;
+  }
 }

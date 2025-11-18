@@ -1,0 +1,43 @@
+---
+import Cardprodukt from "../components/Cardprodukt.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import Button from "../components/Button.astro";
+import Grunde from "../components/Grunde.astro";
+import "../styles/produkt.css";
+---
+
+<PageLayout>
+  <html lang="da">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
+      <meta name="generator" content={Astro.generator} />
+      <title>Produkt</title>
+    </head>
+    <body>
+      <main>
+        <Cardprodukt
+          title="Book Kristian til et inspirerende privat foredrag"
+          text={`Book et privat foredrag med Kristian Humaidan – musiker, meditationsudøver og skaberen af SoundWheel.
+
+Kristian deler sin egen rejse og erfaringer på en nærværende og ærlig måde, der skaber refleksion og engagement.
+
+Book et foredrag for kun 500 kr. – send en forespørgsel nedenfor eller ring på +45 68 19 28 83.`}
+          Buttonlabel="Book en forespørgsel"
+          imageSrc="/img/billede3.webp"
+        />
+        <Grunde />
+        <section class="svg">
+          <div class="svg_p">
+            <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
+            <p>#Soundwheel</p>
+          </div>
+        </section>
+      </main>
+    </body>
+  </html></PageLayout
+>

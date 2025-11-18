@@ -10,13 +10,327 @@ img {
   max-width: 100%;
 }
 
+/************** afsnit 1 **********/
+.afsnit_1 {
+  text-align: left;
+  margin: 70px;
+  line-height: 175%;
+}
+
+.bedre_pauser {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  padding-top: 60px;
+}
+
+.styrk_trivslen {
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.mentale_pauser {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.baggrundsfarve_1 {
+  background-color: #e7e1e1;
+}
+
+/********** afsnit 2 *********/
+.afsnit_2 {
+  text-align: left;
+  margin: 70px;
+  line-height: 175%;
+}
+
+.hundred_med {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-top: 60px;
+}
+
+.fuld_adgang {
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.punkter {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.baggrundsfarve_2 {
+  background-color: #cad6d7;
+}
+
+/************** absolute og relative billeder *************/
+
+.relative {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+.relative img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.absolute {
+  position: absolute;
+  display: block;
+  max-width: 100px;
+  right: 35%;
+}
+
+/******************** sektion 3 med de 3 ikoner *****************/
+
+.cirkel_1 {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f5f3f3;
+  border-radius: 50%;
+  padding: 50px;
+  max-width: 310px;
+  margin: 30px;
+}
+
+.cirkel_2 {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f5f3f3;
+  border-radius: 50%;
+  padding: 50px;
+  max-width: 300px;
+  margin: 30px;
+}
+
+.cirkel_3 {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f5f3f3;
+  border-radius: 50%;
+  padding: 50px;
+  max-width: 300px;
+  margin: 30px;
+}
+
+.img_1 {
+  margin-bottom: 10px;
+  max-width: 60px;
+}
+
+.img_2 {
+  margin-bottom: 10px;
+  max-width: 130px;
+}
+
+.img_3 {
+  margin-bottom: 10px;
+  max-width: 130px;
+}
+
+/***** SVG baggrund ****/
+
+.svg {
+  width: 100%;
+  min-height: 30vh;
+  background-image: url("/img/baggrund.svg");
+  margin-top: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.svg .cirkellogo {
+  max-width: 130px;
+}
+
+.svg_p {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  color: #3a1213;
+  max-width: 160px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-bottom: 150px;
+}
+
 /***************************** dekstop ************************/
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   .grid_2_1fr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     margin-left: 10rem;
     margin-right: 10rem;
+  }
+
+  /**** afsnit 1 *****/
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .bedre_pauser {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding-top: 0%;
+  }
+
+  .styrk_trivslen {
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin-bottom: 15px;
+  }
+
+  .mentale_pauser {
+    font-size: 1.4rem;
+    font-weight: 100;
+  }
+
+  .afsnit_1 {
+    text-align: left;
+    margin: 110px;
+    line-height: 280%;
+  }
+
+  /************* afsnit 2 ************/
+  .grid2_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .afsnit_2 {
+    text-align: left;
+    margin: 100px;
+    line-height: 280%;
+  }
+
+  .hundred_med {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-top: 0%;
+  }
+
+  .fuld_adgang {
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-bottom: 15px;
+  }
+
+  .punkter {
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+
+  .relative {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .relative img {
+    width: 100%; /* billedet fylder hele containerens bredde */
+    height: auto;
+    display: block;
+  }
+
+  .absolute {
+    position: absolute;
+    display: block;
+    max-width: 115px;
+    right: 39%;
+    bottom: 77%;
+  }
+
+  .img_telefoner {
+    order: -1;
+  }
+
+  /******************** cirkler ****************/
+  .grid_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cirkel_1 {
+    text-align: center;
+    background-color: #f5f3f3;
+    border-radius: 50%;
+    padding: 60px;
+    max-width: 360px;
+    margin: 30px;
+  }
+
+  .cirkel_2 {
+    text-align: center;
+    background-color: #f5f3f3;
+    border-radius: 50%;
+    padding: 60px;
+    max-width: 350px;
+    margin: 30px;
+  }
+
+  .cirkel_3 {
+    text-align: center;
+    background-color: #f5f3f3;
+    border-radius: 50%;
+    padding: 60px;
+    max-width: 350px;
+    margin: 30px;
+  }
+
+  .cirkel_p {
+    line-height: 2rem;
+    font-size: larger;
+  }
+
+  .section_margin {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .img_1 {
+    margin-bottom: 10px;
+    max-width: 68px;
+  }
+
+  .img_3 {
+    margin-bottom: 10px;
+    max-width: 130px;
+  }
+
+  .svg {
+    width: 100%;
+    height: 70vh;
+    background-image: url("/img/baggrund.svg");
+    margin-top: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .svg .cirkellogo {
+    max-width: 160px;
+  }
+
+  .svg_p {
+    top: 200px;
+    max-width: 160px;
+    font-size: 1.3rem;
+    padding-bottom: 200px;
   }
 }

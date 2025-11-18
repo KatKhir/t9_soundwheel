@@ -28,6 +28,12 @@ const { title, text, Buttonlabel, imageSrc, imageAlt } = Astro.props;
     line-height: 2.2rem;
   }
 
+  @media (min-width: 800px) {
+    .card {
+      max-width: 100%;
+    }
+  }
+
   .card h2 {
     color: white;
     margin-bottom: 10px;

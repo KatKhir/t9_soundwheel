@@ -1,37 +1,9 @@
----
-// test.astro
-// You can import images or icons here if needed
----
-
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <img src="/img/footerlogo.webp" alt="Footer Logo" />
-    </div>
-    <p class="nyhedsbrev">Nyhedsbreve</p>
-    <p>Tilmeld dig vores nyhedsbrev og hør alt det nye fra os først!</p>
+  <div class="footer-container"><div class="footer-logo"><img src="/img/footerlogo.webp" alt="Footer Logo" /></div> <p class="nyhedsbrev">Nyhedsbreve</p> <p>Tilmeld dig vores nyhedsbrev og hør alt det nye fra os først!</p> <form class="newsletter-form"><input type="email" placeholder="Indtast din e-mail" required /> <button type="submit">Tilmeld</button></form></div>
+  <div class="footer-apps"><p>Download SoundWheel nu og prøv gratis i 14 dage.</p> <div class="app-icons"><img src="/img/applestore.webp" alt="App Store" /> <img src="/img/googleplay.webp" alt="Google Play" /></div></div>
 
-    <form class="newsletter-form">
-      <input type="email" placeholder="Indtast din e-mail" required />
-      <button type="submit">Tilmeld</button>
-    </form>
-  </div>
-  <div class="footer-apps">
-    <p>Download SoundWheel nu og prøv gratis i 14 dage.</p>
-    <div class="app-icons">
-      <img src="/img/applestore.webp" alt="App Store" />
-      <img src="/img/googleplay.webp" alt="Google Play" />
-    </div>
-  </div>
+  <nav class="footer-nav"><a>Kontakt</a> <a>Handels- og abonnementsbetingelser</a> <a href="/virksomhed">For virksomheder </a></nav>
 
-  <!-- Navigation Links -->
-  <nav class="footer-nav">
-    <a>Kontakt</a>
-    <a>Handels- og abonnementsbetingelser</a>
-    <a href="/virksomhed">For virksomheder </a>
-  </nav>
-
-  <!-- Copyright -->
   <p class="footer-copy">&copy; {new Date().getFullYear()} Soundwheel. All rights reserved.</p>
 </footer>
 
@@ -42,12 +14,10 @@
     padding: 40px 20px;
     text-align: center;
   }
-
   .footer .nyhedsbrev {
     font-weight: 400;
     font-size: 30px;
   }
-
   .footer p {
     color: #3a1213;
     margin: 0 auto;
@@ -55,18 +25,15 @@
     padding: 0.6rem;
     font-weight: 300;
   }
-
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
   }
-
   .footer-logo img {
     display: block;
     max-width: 80px;
     margin: 0 auto;
   }
-
   .footer-nav {
     margin-bottom: 20px;
     display: flex;
@@ -74,52 +41,39 @@
     justify-content: center;
     gap: 15px;
   }
-
   @media (min-width: 900px) {
     .footer-nav {
       margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: right;
       gap: 15px;
     }
   }
-
   .footer-nav a {
     color: #3a1213;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
   }
-
   .footer-nav a:hover {
     color: white;
   }
-
   p {
     color: #3a1213;
   }
-
   .footer .footer-copy {
     font-size: 14px;
     color: #ccc;
   }
-
   .footer-apps p {
     margin-bottom: 10px;
-    font-weight: 500;
-  }
-
-  .app-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    font-weight: 400;
   }
 
   .app-icons img {
     max-width: 150px;
     height: auto;
+    margin: 0 auto;
   }
 
   .newsletter-form input[type="email"] {
@@ -128,7 +82,6 @@
     border: none;
     min-width: 100px;
   }
-
   .newsletter-form button {
     padding: 10px 20px;
     background-color: #3a1213;
@@ -138,23 +91,19 @@
     cursor: pointer;
     font-weight: bold;
   }
-
   .newsletter-form button:hover {
     background-color: #ccc;
   }
-
   @media (min-width: 900px) {
     .newsletter-form input[type="email"] {
       min-width: 500px;
       padding: 15px;
       font-size: 14px;
     }
-
     .newsletter-form button {
       padding: 15px 25px;
       font-size: 14px;
     }
-
     .footer p {
       max-width: 450px;
     }

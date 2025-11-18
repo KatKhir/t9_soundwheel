@@ -1,8 +1,9 @@
 ---
 import Card from "../components/Card.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import "../styles/virksomhed.css"
+import "../styles/virksomhed.css";
 import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <PageLayout>
@@ -15,81 +16,77 @@ import Button from "../components/Button.astro";
       <title>For virksomheder</title>
     </head>
     <body>
-     
-        <section class="baggrundsfarve_1">
-            <div class="grid_1_1">
-            <div class="afsnit_1">
-      <h2 class="bedre_pauser">Bedre pauser for dine bedarbejdere</h2>
-      <h3 class="styrk_trivslen">Styrk trivslen i din organisation med SoundWheel Work.</h3>
-      <p class="mentale_pauser">I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. SoundWheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud.
-      </p>
-      <Button label="Køb adgang"/>
-    </div>
-    <div>
-        <img src="public/img/billede2.webp" alt="billede af mand på gras">
-        </div>
+      <section class="baggrundsfarve_1">
+        <div class="grid_1_1">
+          <div class="afsnit_1">
+            <h2 class="bedre_pauser">Bedre pauser for dine bedarbejdere</h2>
+            <h3 class="styrk_trivslen">Styrk trivslen i din organisation med SoundWheel Work.</h3>
+            <p class="mentale_pauser">I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. SoundWheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud.</p>
+            <Button label="Køb adgang" />
+          </div>
+          <div>
+            <img src="public/img/billede2.webp" alt="billede af mand på gras" />
+          </div>
         </div>
       </section>
 
-
-
       <section class="baggrundsfarve_2">
         <div class="grid2_1_1">
-        <div class="afsnit_2">
-<h3 class="hundred_med">Kun 9.999kr / år
-Op til 100 medarbejdere </h3>
-<p class="fuld_adgang">Fuld adgang til SoundWheel Work</p>
-<ul class="punkter">
-    <li>Musikdrevne visualiseringsøvelser</li>
-    <li>Dansk eller engelsk guide</li>
-    <li>Mulighed for at slå guide til og fra</li>
-    <li>6 teamer Heriblandt Fokus, Time out og Power Boost </li>
-    <li>Mere musik, minde tale</li>
-    <li>Opret nemt dine medarbejdere</li>
-    <li>Intropakke med promomateriale</li>
-    <li>Tutorialvideoer med nem on-boarding</li>
-</ul>
-<Button label="Køb adgang"/>
-</div>
-<div class="img_telefoner relative">
-<img class="absolute" src="public/img/soundwheelwork.webp" alt="Soundwheel work icon">
-<img src="public/img/soundwheelworktelefon.webp" alt="Soundwheel Work telefoner">
-</div>
+          <div class="afsnit_2">
+            <h3 class="hundred_med">Kun 9.999kr / år Op til 100 medarbejdere</h3>
+            <p class="fuld_adgang">Fuld adgang til SoundWheel Work</p>
+            <ul class="punkter">
+              <li>Musikdrevne visualiseringsøvelser</li>
+              <li>Dansk eller engelsk guide</li>
+              <li>Mulighed for at slå guide til og fra</li>
+              <li>6 teamer Heriblandt Fokus, Time out og Power Boost</li>
+              <li>Mere musik, minde tale</li>
+              <li>Opret nemt dine medarbejdere</li>
+              <li>Intropakke med promomateriale</li>
+              <li>Tutorialvideoer med nem on-boarding</li>
+            </ul>
+            <Button label="Køb adgang" />
+          </div>
+          <div class="img_telefoner relative">
+            <img class="absolute" src="public/img/soundwheelwork.webp" alt="Soundwheel work icon" />
+            <img src="public/img/soundwheelworktelefon.webp" alt="Soundwheel Work telefoner" />
+          </div>
         </div>
-</section>
+      </section>
 
-<section class="section_margin ">
-<div class="grid_1_1_1">
-<div class="cirkel_1">
-<img class="img_1" src="public/img/ikon1.webp" alt="telefon ikon 1">
-<p class="cirkel_p">Adgang til vores komplette bibliotek af lydrejser, som kan bruges individuelt eller i grupper</p>
-</div>
-<div class="cirkel_2">
-<img class="img_2" src="public/img/ikon2.webp" alt="computer ikon 2">
-<p class="cirkel_p">Brugervenligt adminpanel. Tilføj alle medarbejdere ved tryk på én knap</p>
-</div>
-<div class="cirkel_3">
-<img class="img_3" src="public/img/ikon3.webp" alt="computer ikon 1">
-<p class="cirkel_p">Statistikker, der giver indsigt i, hvordan soundwheel skaber værdi i organisation </p>
-</div>
-</div>
-</section>
+      <section class="section_margin">
+        <div class="grid_1_1_1">
+          <div class="cirkel_1">
+            <img class="img_1" src="public/img/ikon1.webp" alt="telefon ikon 1" />
+            <p class="cirkel_p">Adgang til vores komplette bibliotek af lydrejser, som kan bruges individuelt eller i grupper</p>
+          </div>
+          <div class="cirkel_2">
+            <img class="img_2" src="public/img/ikon2.webp" alt="computer ikon 2" />
+            <p class="cirkel_p">Brugervenligt adminpanel. Tilføj alle medarbejdere ved tryk på én knap</p>
+          </div>
+          <div class="cirkel_3">
+            <img class="img_3" src="public/img/ikon3.webp" alt="computer ikon 1" />
+            <p class="cirkel_p">Statistikker, der giver indsigt i, hvordan soundwheel skaber værdi i organisation</p>
+          </div>
+        </div>
+      </section>
 
       <section>
         <div class="grid_2_1fr">
-        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
-        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
-        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
-        <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere"/>
-   </div>
-    </section>
+          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
+          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
+          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
+          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
+        </div>
+      </section>
 
-     <section class="svg">
+      <section class="svg">
         <div class="svg_p">
           <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
           <p>#Soundwheel</p>
         </div>
       </section>
+      <Footer />
     </body>
   </html>
 </PageLayout>

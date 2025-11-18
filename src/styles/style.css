@@ -5,7 +5,7 @@
 }
 
 img {
-  max-width: 40%;
+  max-width: 100%;
 }
 
 h2,
@@ -135,7 +135,7 @@ h4 {
 
   .audio-card {
     position: absolute;
-    right: 300px;
+    right: 360px;
     width: 150px;
     top: 10px;
     font-size: 0.9rem;

@@ -1,41 +1,59 @@
 ---
-// footer.astro
+// test.astro
 // You can import images or icons here if needed
 ---
 
 <footer class="footer">
   <div class="footer-container">
-    <!-- Logo -->
     <div class="footer-logo">
-      <img src="/img/cirkellogo.webp" alt="Cirkel Logo" class="cirkellogo" />
+      <img src="/img/footerlogo.webp" alt="Footer Logo" />
     </div>
+    <p class="nyhedsbrev">Nyhedsbreve</p>
+    <p>Tilmeld dig vores nyhedsbrev og hør alt det nye fra os først!</p>
 
-    <!-- Navigation Links -->
-    <nav class="footer-nav">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/privacy">Privacy</a>
-    </nav>
-
-    <!-- Social Icons (optional) -->
-    <div class="footer-social">
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-    </div>
-
-    <!-- Copyright -->
-    <p class="footer-copy">&copy; {new Date().getFullYear()} Soundwheel. All rights reserved.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Indtast din e-mail" required />
+      <button type="submit">Tilmeld</button>
+    </form>
   </div>
+  <div class="footer-apps">
+    <p>Download SoundWheel nu og prøv gratis i 14 dage.</p>
+    <div class="app-icons">
+      <img src="/img/applestore.webp" alt="App Store" />
+      <img src="/img/googleplay.webp" alt="Google Play" />
+    </div>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="footer-nav">
+    <a>Kontakt</a>
+    <a>Handels- og abonnementsbetingelser</a>
+    <a href="/virksomhed">For virksomheder </a>
+  </nav>
+
+  <!-- Copyright -->
+  <p class="footer-copy">&copy; {new Date().getFullYear()} Soundwheel. All rights reserved.</p>
 </footer>
 
 <style>
   .footer {
-    background-color: #3a1213; /* dark red/burgundy */
+    background-color: #a29191;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
+  }
+
+  .footer .nyhedsbrev {
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  .footer p {
+    color: #3a1213;
+    margin: 0 auto;
+    max-width: 250px;
+    padding: 0.6rem;
+    font-weight: 300;
   }
 
   .footer-container {
@@ -44,8 +62,9 @@
   }
 
   .footer-logo img {
-    max-width: 120px;
-    margin-bottom: 20px;
+    display: block;
+    max-width: 80px;
+    margin: 0 auto;
   }
 
   .footer-nav {
@@ -56,36 +75,88 @@
     gap: 15px;
   }
 
+  @media (min-width: 900px) {
+    .footer-nav {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: right;
+      gap: 15px;
+    }
+  }
+
   .footer-nav a {
-    color: #fff;
+    color: #3a1213;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
   }
 
   .footer-nav a:hover {
-    color: #ffcc00;
+    color: white;
   }
 
-  .footer-social {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  p {
+    color: #3a1213;
   }
 
-  .footer-social a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .footer-social a:hover {
-    color: #ffcc00;
-  }
-
-  .footer-copy {
+  .footer .footer-copy {
     font-size: 14px;
     color: #ccc;
+  }
+
+  .footer-apps p {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .app-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .app-icons img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .newsletter-form input[type="email"] {
+    padding: 10px;
+    border-radius: 35px;
+    border: none;
+    min-width: 100px;
+  }
+
+  .newsletter-form button {
+    padding: 10px 20px;
+    background-color: #3a1213;
+    color: #fff;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .newsletter-form button:hover {
+    background-color: #ccc;
+  }
+
+  @media (min-width: 900px) {
+    .newsletter-form input[type="email"] {
+      min-width: 500px;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .newsletter-form button {
+      padding: 15px 25px;
+      font-size: 14px;
+    }
+
+    .footer p {
+      max-width: 450px;
+    }
   }
 </style>

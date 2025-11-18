@@ -12,130 +12,143 @@ import "../styles/style.css";
       <meta charset="utf-8" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="viewport" content="width=device-width" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
       <meta name="generator" content={Astro.generator} />
       <title>Astro</title>
     </head>
     <body>
-      <section class="forside">
-        <div class="venstre">
-          <h1>Nærende pauser</h1>
-          <h2>Via progressiv musik og visualisering</h2>
-        </div>
+      <main>
+        <section class="forside">
+          <div class="forside-content">
+            <div class="venstre">
+              <h1>Nærende pauser</h1>
+              <h2>Via progressiv musik og visualisering</h2>
+              <div class="app-icons">
+                <img src="/img/applestore.webp" alt="App Store" />
+                <img src="/img/googleplay.webp" alt="Google Play" />
+              </div>
+            </div>
 
-        <div class="højre">
-          <p>Mere ro</p>
-          <p>Større fokus</p>
-          <p>Ny energi</p>
-          <p>Bedre søvn på bare 10 min</p>
-        </div>
+            <div class="højre">
+              <p>Mere ro</p>
+              <p>Større fokus</p>
+              <p>Ny energi</p>
+              <p>Bedre søvn</p>
+              <p>på bare 10 min</p>
+            </div>
 
-        <div class="audio-card">
-          <button class="play-btn">▶</button>
-          <p>Prøv en lydrejse</p>
-          <small>Ocean 8:09</small>
-        </div>
-      </section>
+            <div class="audio-card">
+              <button class="play-btn">▶</button>
+              <p>Prøv en lydrejse</p>
+              <small>Ocean 8:09</small>
+            </div>
+          </div>
+        </section>
 
-      <section class="om">
-        <img src="/img/cirkellogo.webp" alt="Forside cirkellogo" />
-        <p>SoundWheel er en app med fokus på guidede lydrejser og musikmeditationer. Den kombinerer musik, stemme og visualisering for at skabe ro, energi eller fokus. Dette gøres med korte sessioner på under 10 minutter med temaer som Rest, Rise og Create.</p>
-        <Button label="Prøv 14 dage gratis" />
-      </section>
+        <section class="om">
+          <img src="/img/cirkellogo.webp" alt="Forside cirkellogo" />
+          <p>SoundWheel er en app med fokus på guidede lydrejser og musikmeditationer. Den kombinerer musik, stemme og visualisering for at skabe ro, energi eller fokus. Dette gøres med korte sessioner på under 10 minutter med temaer som Rest, Rise og Create.</p>
+          <Button label="Prøv 14 dage gratis" />
+        </section>
 
-      <section class="abonnemment">
-        <div class="phones">
-          <img class="phone phone-left" src="/img/telefon2.webp" alt="billede af en telefon" />
-          <img class="phone phone-right" src="/img/telefon1.webp" alt="billede af en telefon 2" />
-        </div>
-
-        <div class="abonnemment_indhold">
-          <p class="pris">49 kr. /måned</p>
-          <p class="pris">14 dages gratis prøveperiode</p>
-          <p class="prøve">Abonnement</p>
-          <h3>Fuld afgang til SoundWheel App</h3>
-          <ul>
-            <li>Musikdrevne visualiserings øvelser</li>
-            <li>Mulighed for at slå guide til og fra</li>
-            <li>9 temaer Heriblandt Rest, Rise, Create og Receive</li>
-            <li>Mere musik, mindre tale</li>
-            <li>Motiverende introforløb i 9 trin</li>
-            <li>Nemt at opsige</li>
-          </ul>
-          <div class="plus">+</div>
-          <h3>Fuld adgang til KidsWheel</h3>
-          <ul>
-            <li>Lydrejser for børn</li>
-            <li>4 temaer Sov godt, Ny energi, Stå sikkert og Balance</li>
-          </ul>
-          <Button label="Start prøveperiode" />
-        </div>
-      </section>
-
-      <section class="tre_grunde">
-        <h2>Hvorfor vælge Soundwheel?</h2>
-
-        <div class="grunde_container">
-          <div class="grunde">
-            <p class="nummer">1</p>
-            <h3>Enkelt og fleksibelt</h3>
-            <p>Kortfattede lydrejser, der passer ind i en hektisk arbejdsdag.</p>
+        <section class="abonnemment">
+          <div class="phones">
+            <img class="phone phone-left" src="/img/telefon2.webp" alt="billede af en telefon" />
+            <img class="phone phone-right" src="/img/telefon1.webp" alt="billede af en telefon 2" />
+            <img class="rødt_logo" src="/img/rødtlogo.webp" alt="Billede af et rødt logo" />
           </div>
 
-          <div class="grunde">
-            <p class="nummer">2</p>
-            <h3>Øget trivsel og fokus</h3>
-            <p>Hjælp dit team med at finde ro, øge energiniveauet og opnå større psykologisk tryghed</p>
+          <div class="abonnemment_indhold">
+            <p class="pris">49 kr. /måned</p>
+            <p class="pris">14 dages gratis prøveperiode</p>
+            <p class="prøve">Abonnement</p>
+            <h3>Fuld afgang til SoundWheel App</h3>
+            <ul>
+              <li>Musikdrevne visualiserings øvelser</li>
+              <li>Mulighed for at slå guide til og fra</li>
+              <li>9 temaer Heriblandt Rest, Rise, Create og Receive</li>
+              <li>Mere musik, mindre tale</li>
+              <li>Motiverende introforløb i 9 trin</li>
+              <li>Nemt at opsige</li>
+            </ul>
+            <div class="plus">+</div>
+            <h3>Fuld adgang til KidsWheel</h3>
+            <ul>
+              <li>Lydrejser for børn</li>
+              <li>4 temaer Sov godt, Ny energi, Stå sikkert og Balance</li>
+            </ul>
+            <Button label="Start prøveperiode" />
           </div>
+        </section>
 
-          <div class="grunde">
-            <p class="nummer">3</p>
-            <h3>Kosteffektivt</h3>
-            <p>En lille investering med stor effekt - for både medarbejdere og virksomhedens bundlinje. .</p>
+        <section class="tre_grunde">
+          <h2>Hvorfor vælge Soundwheel?</h2>
+
+          <div class="grunde_container">
+            <div class="grunde">
+              <p class="nummer">1</p>
+              <h3>Enkelt og fleksibelt</h3>
+              <p>Kortfattede lydrejser, der passer ind i en hektisk arbejdsdag.</p>
+            </div>
+
+            <div class="grunde">
+              <p class="nummer">2</p>
+              <h3>Øget trivsel og fokus</h3>
+              <p>Hjælp dit team med at finde ro, øge energiniveauet og opnå større psykologisk tryghed</p>
+            </div>
+
+            <div class="grunde">
+              <p class="nummer">3</p>
+              <h3>Kosteffektivt</h3>
+              <p>En lille investering med stor effekt - for både medarbejdere og virksomhedens bundlinje. .</p>
+            </div>
           </div>
-        </div>
-        <Button label="For virksomheder" />
-      </section>
+          <Button label="For virksomheder" />
+        </section>
 
-      <section class="meditation">
-        <div class="content">
-          <h2>Ikke endnu en meditations-app!</h2>
-          <p>Mange oplever rastløshed, når de forsøger sig med traditionel meditation eller mindfulness. Springet fra hverdagens høje gear til det meget lave tempo er simpelthen for stort, og i stedet for at finde ro bliver man frustreret.</p>
-          <p>Det vil vi lave om på med Soundwheel.</p>
-          <p>Vores progressive musik og enkle visualiseringer er let tilgængelige, og helt vildt powerfulde. Det tager under 10 minutter, og kræver at du lytter</p>
-        </div>
-        <img src="/img/billede2.webp" alt="Billede af en mand" />
-      </section>
+        <section class="meditation">
+          <div class="content">
+            <h2>Ikke endnu en meditations-app!</h2>
+            <p>Mange oplever rastløshed, når de forsøger sig med traditionel meditation eller mindfulness. Springet fra hverdagens høje gear til det meget lave tempo er simpelthen for stort, og i stedet for at finde ro bliver man frustreret.</p>
+            <p>Det vil vi lave om på med Soundwheel.</p>
+            <p>Vores progressive musik og enkle visualiseringer er let tilgængelige, og helt vildt powerfulde. Det tager under 10 minutter, og kræver at du lytter</p>
+          </div>
+          <img src="/img/billede2.webp" alt="Billede af en mand" />
+        </section>
 
-      <section class="mental_fitness">
-        <img src="/img/billede3.webp" alt="Billede af en mand der sidder" />
+        <section class="mental_fitness">
+          <img src="/img/billede3.webp" alt="Billede af en mand der sidder" />
 
-        <div class="content">
-          <h2>Mental fitness for medarbejdere</h2>
-          <p>Skab bedre trivsel for dit team med SoundWheel. Vores korte sessioner er let tilgængelige og skaber nærende små pauser i løbet af arbejdsdagen. De reducerer stress, skærper fokus og giver ny energi.</p>
-          <p>Brug SoundWheel både individuelt og i fællesskab, og løft stemningen på kontoret. Det giver mere overskud og skaber psykologisk tryghed.</p>
-          <p>Invester i dit teams trivsel og oplev den positive effekt i hele din organisation. Ræk ud til os for at høre mere om SoundWheel for virksomheder.</p>
-          <Button label="Læs mere" />
-        </div>
-      </section>
+          <div class="content">
+            <h2>Mental fitness for medarbejdere</h2>
+            <p>Skab bedre trivsel for dit team med SoundWheel. Vores korte sessioner er let tilgængelige og skaber nærende små pauser i løbet af arbejdsdagen. De reducerer stress, skærper fokus og giver ny energi.</p>
+            <p>Brug SoundWheel både individuelt og i fællesskab, og løft stemningen på kontoret. Det giver mere overskud og skaber psykologisk tryghed.</p>
+            <p>Invester i dit teams trivsel og oplev den positive effekt i hele din organisation. Ræk ud til os for at høre mere om SoundWheel for virksomheder.</p>
+            <Button label="Læs mere" />
+          </div>
+        </section>
 
-      <section class="skole">
-        <div class="content">
-          <h2>Skole og uddannelse</h2>
-          <p>SoundWheel støtter trivslen på skoler og uddannelsesinstitutioner. Vi fungerer som et nærende brain-break faciliteret af underviseren i plenum, samt et individuelt redskab til små pauser for den enkelte elev.</p>
-          <p>Vi tror på en ny og anderledes vej til mentalt og emotionelt overskud, og feedbacken vi får, bekræfter os i at vi er på rette vej. De studerende oplever et udogmatisk redskab i øjenhøjde, som er nemt at bruge og giver stor effekt selv ved kortvarigt brug.</p>
-          <p>Kontakt os hvis din uddannelsesinstitution er interesseret i at høre mere om hvordan vores skole-samarbejde ser ud.</p>
-        </div>
-        <img src="/img/billede4.webp" alt="billede af en dame med høretelefoner på" />
-      </section>
+        <section class="skole">
+          <div class="content">
+            <h2>Skole og uddannelse</h2>
+            <p>SoundWheel støtter trivslen på skoler og uddannelsesinstitutioner. Vi fungerer som et nærende brain-break faciliteret af underviseren i plenum, samt et individuelt redskab til små pauser for den enkelte elev.</p>
+            <p>Vi tror på en ny og anderledes vej til mentalt og emotionelt overskud, og feedbacken vi får, bekræfter os i at vi er på rette vej. De studerende oplever et udogmatisk redskab i øjenhøjde, som er nemt at bruge og giver stor effekt selv ved kortvarigt brug.</p>
+            <p>Kontakt os hvis din uddannelsesinstitution er interesseret i at høre mere om hvordan vores skole-samarbejde ser ud.</p>
+          </div>
+          <img src="/img/billede4.webp" alt="billede af en dame med høretelefoner på" />
+        </section>
 
-      <Reviews />
-      <section class="svg">
-        <div class="svg_p">
-          <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
-          <p>#Soundwheel</p>
-        </div>
-      </section>
-      <Footer />
+        <Reviews />
+        <section class="svg">
+          <div class="svg_p">
+            <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
+            <p>#Soundwheel</p>
+          </div>
+        </section>
+        <Footer />
+      </main>
     </body>
   </html>
 </PageLayout>

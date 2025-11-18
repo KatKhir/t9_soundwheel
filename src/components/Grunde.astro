@@ -1,0 +1,99 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<section class="tre_grunde">
+  <h2>Hvorfor vælge Soundwheel?</h2>
+
+  <div class="grunde_container">
+    <div class="grunde">
+      <p class="nummer">1</p>
+      <h3>Enkelt og fleksibelt</h3>
+      <p>Kortfattede lydrejser, der passer ind i en hektisk arbejdsdag.</p>
+    </div>
+
+    <div class="grunde">
+      <p class="nummer">2</p>
+      <h3>Øget trivsel og fokus</h3>
+      <p>Hjælp dit team med at finde ro, øge energiniveauet og opnå større psykologisk tryghed.</p>
+    </div>
+
+    <div class="grunde">
+      <p class="nummer">3</p>
+      <h3>Kosteffektivt</h3>
+      <p>En lille investering med stor effekt - for både medarbejdere og virksomhedens bundlinje.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grunde_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  @media (min-width: 800px) {
+    .grunde_container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0px;
+    }
+  }
+
+  .tre_grunde {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .tre_grunde h2 {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 800px) {
+    .tre_grunde h2 {
+      font-size: 2rem;
+      padding-bottom: 30px;
+    }
+  }
+
+  .grunde {
+    text-align: center;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 80px 50px;
+
+    border-radius: 50%;
+    background-color: #f5f3f3;
+    margin: 0 auto 20px;
+  }
+
+  .grunde .nummer {
+    font-size: 3rem;
+    font-weight: 350;
+    color: #3a1f1a;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  @media (min-width: 800px) {
+    .grunde .nummer {
+      font-size: 3.5rem;
+      font-weight: 350;
+    }
+  }
+
+  .grunde h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .grunde p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+</style>

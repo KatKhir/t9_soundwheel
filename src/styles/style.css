@@ -40,7 +40,6 @@ h4 {
 }
 
 .app-icons {
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }

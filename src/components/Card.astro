@@ -1,12 +1,12 @@
 ---
-const {img, text1, text2, tag } = Astro.props
+const {img, text1, text2, tag ,id} = Astro.props
 ---
 
 <article>
 <img src={img}>
 <p>{text1}</p>
 <p>{text2}</p>
-<p class="tag">{tag}</p>
+<a class= "tag" href=`/produkter/${id}`>LINK</a>
 </article> 
 
 
@@ -23,6 +23,10 @@ color: white;
 
 .tag{
     padding-bottom: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    margin: 30px;
 }
 
 article{

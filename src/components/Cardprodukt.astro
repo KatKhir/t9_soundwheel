@@ -5,11 +5,12 @@ export interface Props {
   title: string;
   text: string;
   Buttonlabel?: string;
-  imageSrc?: string;
-  imageAlt?: string;
+  imageSrc: string;
+  imageAlt: string;
 }
 
 const { title, text, Buttonlabel, imageSrc, imageAlt } = Astro.props;
+console.log("Image Src", imageSrc);
 
 const safeButtonLabel = Buttonlabel ?? "Læs mere";
 const safeImageSrc = imageSrc ?? "/img/placeholder.webp";

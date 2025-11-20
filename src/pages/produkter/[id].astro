@@ -1,0 +1,32 @@
+---
+// import type { GetStaticPaths } from "astro";
+
+export async function  getStaticPaths  ( ) {
+
+     const url = "https://gcufhrwragpcwfgtbzwq.supabase.co/rest/v1/people";
+    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjdWZocndyYWdwY3dmZ3RiendxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Njg2MDIsImV4cCI6MjA3ODU0NDYwMn0.zUnYL_1b6t_zRH8yCIuox8mxHoEjtS1rY1893MG1B1g";
+
+    const options = {
+            headers: {
+            apikey: key, 
+        },
+    }
+
+    const cardRequest = await fetch(url, options);
+    const cardData = await cardRequest.json();
+    return cardData.map((card)=>
+    {
+
+        return{
+                params :{ id: card.id},
+                props : {card}
+
+        }
+    })
+}
+
+const {id} = Astro.params;
+const {card} = Astro.props;
+---
+
+<h1>Hallo {id}</h1>

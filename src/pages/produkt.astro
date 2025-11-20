@@ -5,6 +5,21 @@ import Button from "../components/Button.astro";
 import Grunde from "../components/Grunde.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/produkt.css";
+
+const url = "https://gcufhrwragpcwfgtbzwq.supabase.co/rest/v1/people";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjdWZocndyYWdwY3dmZ3RiendxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Njg2MDIsImV4cCI6MjA3ODU0NDYwMn0.zUnYL_1b6t_zRH8yCIuox8mxHoEjtS1rY1893MG1B1g";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+//**** PEOPLE */
+const supaRequest = await fetch(url, options);
+const supaData = await supaRequest.json();
+
+console.log("supaData", supaData);
 ---
 
 <PageLayout>
@@ -21,25 +36,22 @@ import "../styles/produkt.css";
     </head>
     <body>
       <main>
-        <Cardprodukt
-          title="Book Kristian til et inspirerende privat foredrag"
-          text={`Book et privat foredrag med Kristian Humaidan – musiker, meditationsudøver og skaberen af SoundWheel.
-
-Kristian deler sin egen rejse og erfaringer på en nærværende og ærlig måde, der skaber refleksion og engagement.
-
-Book et foredrag for kun 500 kr. – send en forespørgsel nedenfor eller ring på +45 68 19 28 83.`}
-          Buttonlabel="Book en forespørgsel"
-          imageSrc="/img/billede3.webp"
-        />
-        <Grunde />
-        <section class="svg">
-          <div class="svg_p">
-            <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
-            <p>#Soundwheel</p>
-          </div>
-        </section>
-        <Footer />
+        <div class="grid_1fr">
+          {
+            supaData.map((supa) => {
+              return <Cardprodukt title={supa.Overskrift} text={supa.Tekst} imageSrc={supa.imgs} />;
+            })
+          }
+          <Grunde />
+          <section class="svg">
+            <div class="svg_p">
+              <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
+              <p>#Soundwheel</p>
+            </div>
+          </section>
+          <Footer />
+        </div>
       </main>
     </body>
-  </html></PageLayout
->
+  </html>
+</PageLayout>

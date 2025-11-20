@@ -4,21 +4,29 @@ import Button from "../components/Button.astro";
 export interface Props {
   title: string;
   text: string;
-  Buttonlabel: string;
+  Buttonlabel?: string;
   imageSrc: string;
-  imageAlt?: string;
+  imageAlt: string;
 }
 
 const { title, text, Buttonlabel, imageSrc, imageAlt } = Astro.props;
+console.log("Image Src", imageSrc);
+
+const safeButtonLabel = Buttonlabel ?? "Læs mere";
+const safeImageSrc = imageSrc ?? "/img/placeholder.webp";
+const safeImageAlt = imageAlt ?? title;
 ---
 
 <div class="card">
-  <h2>{title}</h2>
-  <p>{text}</p>
-  <Button label={Buttonlabel} />
+  <div class="card-text">
+    <h2>{title}</h2>
+    <p>{text}</p>
+    {safeButtonLabel && <Button label={safeButtonLabel} />}
+  </div>
 
-  <!-- Added proper class so CSS applies -->
-  <img class="card-image" src={imageSrc} alt={imageAlt || title} />
+  <div class="card-image-wrapper">
+    {safeImageSrc && <img class="card-image" src={safeImageSrc} alt={safeImageAlt} />}
+  </div>
 </div>
 
 <style>
@@ -28,11 +36,26 @@ const { title, text, Buttonlabel, imageSrc, imageAlt } = Astro.props;
     line-height: 2.2rem;
   }
 
+  @media (min-width: 800px) {
+    .card {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center; /* optional – vertically center text */
+    }
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .card h2 {
     color: white;
     margin-bottom: 10px;
     font-size: 1.5rem;
-    margin: 0 auto;
     margin: 0% 10% 5% 10%;
     padding-top: 10%;
   }

@@ -4,6 +4,22 @@ import PageLayout from "../layouts/PageLayout.astro";
 import "../styles/virksomhed.css";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
+import { quotelessJson } from "astro:schema";
+
+
+ const url = "https://gcufhrwragpcwfgtbzwq.supabase.co/rest/v1/people";
+ const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjdWZocndyYWdwY3dmZ3RiendxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Njg2MDIsImV4cCI6MjA3ODU0NDYwMn0.zUnYL_1b6t_zRH8yCIuox8mxHoEjtS1rY1893MG1B1g";
+
+const options = {
+headers: {
+   apikey: key, 
+},
+}
+
+const cardRequest = await fetch(url, options);
+const cardData = await cardRequest.json();
+
+console.log("cardData", cardData);
 ---
 
 <PageLayout>
@@ -13,6 +29,9 @@ import Footer from "../components/Footer.astro";
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="viewport" content="width=device-width" />
       <meta name="generator" content={Astro.generator} />
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
       <title>For virksomheder</title>
     </head>
     <body>
@@ -25,7 +44,7 @@ import Footer from "../components/Footer.astro";
             <Button label="Køb adgang" />
           </div>
           <div>
-            <img src="/img/billede2.webp" alt="billede af mand på gras" />
+            <img src="/img/pexels-fauxels-3184418.webp" alt="billede af teamwork" />
           </div>
         </div>
       </section>
@@ -73,10 +92,18 @@ import Footer from "../components/Footer.astro";
 
       <section>
         <div class="grid_2_1fr">
-          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
-          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
-          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
-          <Card img="/img/billede2.webp" text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." tag="Læs mere" />
+        {cardData.map((card) => {
+          return (
+          <Card 
+          img={card.imgs} 
+          text1={card.Overskrift}
+          text2={card.produktinfo}
+          id={card.id}
+          />
+          )
+        })}
+
+  
         </div>
       </section>
 

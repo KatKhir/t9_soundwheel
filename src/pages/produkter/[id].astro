@@ -1,6 +1,14 @@
 ---
 // import type { GetStaticPaths } from "astro";
 
+import Cardprodukt from "../../components/Cardprodukt.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import Button from "../../components/Button.astro";
+import Grunde from "../../components/Grunde.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/produkt.css"
+
+
 export async function  getStaticPaths  ( ) {
 
      const url = "https://gcufhrwragpcwfgtbzwq.supabase.co/rest/v1/people";
@@ -12,9 +20,12 @@ export async function  getStaticPaths  ( ) {
         },
     }
 
-    const cardRequest = await fetch(url, options);
-    const cardData = await cardRequest.json();
-    return cardData.map((card)=>
+    const supaRequest = await fetch(url, options);
+    const supaData = await supaRequest.json();
+    console.log("supaData", supaData);
+
+  
+    return supaData.map((card)=>
     {
 
         return{
@@ -28,5 +39,39 @@ export async function  getStaticPaths  ( ) {
 const {id} = Astro.params;
 const {card} = Astro.props;
 ---
+<PageLayout>
+  <html lang="da">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
+      <meta name="generator" content={Astro.generator} />
+      <title>Produkt</title>
+    </head>
+    <body>
+      <main>
+        <div class="grid_1fr">
 
-<h1>Hallo {id}</h1>
+        <Cardprodukt 
+        title={card.Overskrift}
+        text={card.Tekst}
+        imageSrc={card.imgs} 
+        />
+    
+ 
+          <Grunde />
+          <section class="svg">
+            <div class="svg_p">
+              <img class="cirkellogo" src="/img/cirkellogo.webp" alt="cirkel logo" />
+              <p>#Soundwheel</p>
+            </div>
+          </section>
+          <Footer />
+        </div>
+      </main>
+    </body>
+  </html>
+</PageLayout>

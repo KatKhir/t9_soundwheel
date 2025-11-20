@@ -7,26 +7,6 @@ import Footer from "../components/Footer.astro";
 import { quotelessJson } from "astro:schema";
 
 
-// const quoteEndpoint = "https://dummyjson.com/quotes";
-
-// const quoteRequest = await fetch(quoteEndpoint);
-// const quoteData = await quoteRequest.json(); 
-
-// const postEndpoint = "https://dummyjson.com/posts";
-
-// const postRequest = await fetch(postEndpoint);
-
-// const postData = await postRequest.json();
-
-
-// const dogEndPoint = "https://dog.ceo/api/breeds/springer/images"
-
-// const dogRequest = await fetch(dogEndPoint);
-// const dogData = await dogRequest.json();
-
-//  console.log("postData", postData);
-
-
  const url = "https://gcufhrwragpcwfgtbzwq.supabase.co/rest/v1/people";
  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjdWZocndyYWdwY3dmZ3RiendxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Njg2MDIsImV4cCI6MjA3ODU0NDYwMn0.zUnYL_1b6t_zRH8yCIuox8mxHoEjtS1rY1893MG1B1g";
 
@@ -49,6 +29,9 @@ console.log("cardData", cardData);
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="viewport" content="width=device-width" />
       <meta name="generator" content={Astro.generator} />
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
       <title>For virksomheder</title>
     </head>
     <body>
@@ -61,7 +44,7 @@ console.log("cardData", cardData);
             <Button label="Køb adgang" />
           </div>
           <div>
-            <img src="/img/billede2.webp" alt="billede af mand på gras" />
+            <img src="/img/pexels-fauxels-3184418.webp" alt="billede af teamwork" />
           </div>
         </div>
       </section>
@@ -119,13 +102,6 @@ console.log("cardData", cardData);
           />
           )
         })}
-
-          <!-- <Card 
-          img="/img/billede2.webp" 
-          text1="Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
-          text2="Lorem ipsum dolor sit amet, consectetur adipisicing elit." 
-          tag="Læs mere" 
-          /> --->
 
   
         </div>
